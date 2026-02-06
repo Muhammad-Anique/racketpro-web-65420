@@ -1,0 +1,138 @@
+/* RacketPro Web - Global Styles */
+
+:root {
+  /* Color Palette - High-End Athletic Aesthetic */
+  --primary: #0f172a;       /* Slate 900 */
+  --accent: #38bdf8;        /* Sky 400 */
+  --accent-dark: #0284c7;   /* Sky 700 */
+  --secondary: #64748b;     /* Slate 500 */
+  --background: #ffffff;
+  --surface: #f8fafc;       /* Slate 50 */
+  --border: #e2e8f0;        /* Slate 200 */
+  --text-main: #1e293b;     /* Slate 800 */
+  --text-muted: #475569;    /* Slate 600 */
+  --white: #ffffff;
+  
+  /* Transitions/Spacing */
+  --transition: all 0.3s ease;
+  --container-width: 1200px;
+}
+
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text-main);
+  background-color: var(--background);
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+h1, h2, h3 {
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+/* Typography */
+.section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--primary);
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--accent);
+  color: var(--primary);
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 700;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-dark);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--white);
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 700;
+  display: inline-block;
+  border: 2px solid var(--white);
+  margin-left: 1rem;
+}
+
+.btn-secondary:hover {
+  background-color: var(--white);
+  color: var(--primary);
+}
+
+/* Navigation */
+.navbar {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: var(--accent);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-links a:hover:not(.btn-primary) {
+  color: var(--accent);
+}
